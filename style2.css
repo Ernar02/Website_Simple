@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;    
+    background: linear-gradient(to right, #868f96 0%, #596164 100%);
+    padding: 10px 20px;
+    border-bottom: 3px solid rgb(255, 255, 255);
+}
+
+body {
+    background-image: url(./img/forest.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    opacity: 0.9;
+}
+
+.navbar a {
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.5s ease;
+    text-shadow: 1px 1px 2px rgba(193, 189, 189, 0.5);  
+}
+
+.navbar a:hover {
+    background-color: #6cd5f8;
+    color: black;
+}
+
+.navbar a i {
+    margin-left: 8px; 
+    font-size: 16px; 
+    margin-right: 5px;
+}
+
+.LnR {
+    margin-left: auto;
+    display: flex;
+    gap: 10px;
+}
+
+.register-container {
+    background-color: #d5d5d5ad;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    margin: 80px 0px 0px 650px;
+    animation: fadeIn 1s ease-out;
+}
+
+.register-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.register-container label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.register-container label i {
+    margin-right: 8px;
+}
+
+.register-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    border-style: none;
+    border-bottom: solid;
+    background-color: transparent;
+}
+
+.register-container button {
+    background-color: #5cb85c;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.register-container button:hover {
+    background-color: #4cae4c;
+    transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar a {
+        padding: 10px;
+    }
+
+    .LnR {
+        margin: 10px 0;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .register-container {
+        margin: 40px 20px;
+        width: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    body{
+        background-size: auto;
+    }
+
+    .navbar a {
+        display: block;
+        padding: 10px;
+        width: 100%;
+        text-align: left;
+    }
+
+    .register-container {
+        padding: 20px;
+        width: 340px;
+        margin-left: 60px;
+    }
+
+    .register-container label,
+    .register-container input,
+    .register-container button {
+        font-size: 14px;
+    }
+}
